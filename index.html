@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Basic Music Player with Playlist Creation</title>
+<link rel="stylesheet" href="style.css">
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+<div class="background-section">
+    <div class="player-container">
+        <h2>Music Player</h2>
+        <audio id="audioPlayer" controls>
+            <source src="photo/track1.mp3" type="audio/mp3">
+            <source src="photo/track2.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <div class="controls">
+            <button id="prevBtn">Prev</button>
+            <button id="playBtn">Play</button>
+            <button id="nextBtn">Next</button>
+        </div>
+        <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="1">
+        <div id="playlist" class="playlist"></div>
+        <div class="playlist-add">
+            <input type="text" id="trackName" placeholder="Enter track name">
+            <input type="file" id="trackFile" accept="audio/*">
+            <button onclick="addTrack()">Add Track</button>
+        </div>
+        <div class="spotify-add">
+            <input type="text" id="spotifyName" placeholder="Enter Spotify track name">
+            <input type="text" id="spotifyURL" placeholder="Enter Spotify embed URL">
+            <button onclick="addSpotifyTrack()">Add Spotify Track</button>
+        </div>
+        <div id="spotifyPlaylist" class="spotify-playlist"></div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

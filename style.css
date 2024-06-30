@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.background-section {
+    background-image: url("photo/photo.jpg"); /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Background color for the player */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.controls {
+    margin-top: 10px;
+}
+
+.playlist, .spotify-playlist {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.track {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+.track a {
+    color: inherit;
+    text-decoration: none;
+    flex-grow: 1;
+}
+
+.track i {
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+input[type="range"] {
+    width: 80%;
+    margin: 10px auto;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    background-color: #2196F3;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background-color: #ccc;
+}
+
+.playlist-add, .spotify-add {
+    margin-top: 20px;
+}
+
+.track.playing {
+    background-color: #c22e2e; /* Light gray background for currently playing track */
+}
+
+
+.playlist-add input[type="text"], .spotify-add input[type="text"], .playlist-add input[type="file"], .playlist-add button, .spotify-add button {
+    margin: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .player-container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    input[type="range"] {
+        width: 100%;
+    }
+}
